@@ -1,0 +1,23 @@
+{
+  "name": "rogergerecke/twigextension",
+  "description": "Extension for Twig",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Roger Gerecke",
+      "email": "roger.gerecke@redkitty.de"
+    }
+  ],
+  "require": {
+    "php": ">=7.2.5"
+  },
+  "require-dev": {
+    "twig/twig": "3.0"
+  },
+  "config": {
+    "platform": {
+      "php": ">=7.2.5"
+    }
+  }
+}
