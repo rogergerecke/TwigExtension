@@ -9,7 +9,7 @@ use Twig\TwigFunction;
 
 class TwigDateDifference extends AbstractExtension
 {
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('date_difference', [$this, 'calculateDateDifference']),
@@ -17,9 +17,12 @@ class TwigDateDifference extends AbstractExtension
     }
 
     /**
+     * Calculate days between given date range
+     * format default %a full days
+     *
      * @throws Exception
      */
-    public function calculateDateDifference($start, $end, $format = 'd')
+    public function calculateDateDifference($start, $end, $format = '%a'): string
     {
         $origin = new DateTimeImmutable($start);
         $target = new DateTimeImmutable($end);
